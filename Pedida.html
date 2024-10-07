@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7e6e6;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 400px;
+        }
+        img {
+            width: 80%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff6f91;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .yes {
+            background-color: #ff6f91;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+            color: white;
+        }
+        .yes:hover {
+            background-color: #ff4d73;
+        }
+        .no:hover {
+            background-color: #aaa;
+        }
+        .message {
+            display: none;
+            font-size: 1.4em;
+            color: #ff6f91;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="image.png" alt="Imagen romántica">
+        <h1>¿Quieres ser mi novia?</h1>
+        <p>Me haces muy feliz y quiero compartir muchos más momentos contigo!</p>
+        <button class="button yes" onclick="showMessage('yes')">Sí❣️</button>
+        <button class="button no" onclick="showMessage('no')">No😿</button>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        function showMessage(answer) {
+            var message = document.getElementById('message');
+            if (answer === 'yes') {
+                message.textContent = "Me haces sentir el chico más afortunado del mundo❣️";
+                message.style.display = "block";
+            } else {
+                message.textContent = "Está bien, me tiraré por la ventana😔";
+                message.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
